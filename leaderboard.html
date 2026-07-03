@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ka" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ლიდერბორდი — სიტყვები</title>
+<meta name="description" content="ნახეთ საუკეთესო ქართული სიტყვების მაძიებლები.">
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=nunito:400,600,700,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div id="route-progress"></div>
+
+<header class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark ka">ს</span>
+      <span>
+        სიტყვები
+        <span class="brand-sub">word discovery</span>
+      </span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html">მთავარი</a>
+      <a href="leaderboard.html">ლიდერბორდი</a>
+      <a href="profile.html">პროფილი</a>
+      <a href="about.html">შესახებ</a>
+    </nav>
+
+    <button class="burger" aria-label="მენიუს გახსნა">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="overlay"></div>
+<nav class="side-panel">
+  <a href="index.html">მთავარი</a>
+  <a href="leaderboard.html">ლიდერბორდი</a>
+  <a href="profile.html">პროფილი</a>
+  <a href="about.html">შესახებ</a>
+</nav>
+
+<main>
+  <section class="hero container" style="padding-bottom: 10px;">
+    <span class="hero-eyebrow">🏆 სორტირება</span>
+    <h1>ლიდერ<span class="accent-text">ბორდი</span></h1>
+    <p class="lead">საუკეთესო ქართული სიტყვების მაძიებლები პლატფორმაზე.</p>
+  </section>
+
+  <!-- top 3 -->
+  <section class="container" style="margin-top: 16px;">
+    <div id="podium-loading" class="spinner"></div>
+    <div class="podium" id="podium" style="display: none;"></div>
+  </section>
+
+  <!-- full table -->
+  <section class="container" style="margin-top: 50px; margin-bottom: 70px;">
+    <div class="section-head">
+      <span class="tag">სრული სია</span>
+      <h2>ყველა მონაწილე</h2>
+    </div>
+
+    <div id="table-loading" class="spinner"></div>
+
+    <div class="table-wrap" id="table-wrap" style="display: none;">
+      <table class="lb-table">
+        <thead>
+          <tr>
+            <th>რანგი</th>
+            <th>მომხმარებელი</th>
+            <th>აღმოჩენები</th>
+            <th>სულ ძებნა</th>
+          </tr>
+        </thead>
+        <tbody id="lb-tbody"></tbody>
+      </table>
+    </div>
+
+    <div id="table-empty" class="empty-state" style="display: none;">
+      <div class="glyph">📊</div>
+      <p>მონაცემები ვერ ჩაიტვირთა. სცადეთ გვერდის განახლება.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p style="margin: 0;">სიტყვები &mdash; BTU Frontend Web Development საბოლოო პროექტი &mdash; HTML, CSS &amp; JavaScript</p>
+  </div>
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/leaderboard.js"></script>
+</body>
+</html>

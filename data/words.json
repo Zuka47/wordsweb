@@ -1,0 +1,16 @@
+{
+  "words": [
+    { "word": "ცეცხლი", "meaning": "fire", "discoveredBy": "სისტემა", "rarity": "common" },
+    { "word": "წყალი", "meaning": "water", "discoveredBy": "სისტემა", "rarity": "common" },
+    { "word": "მიწა", "meaning": "earth", "discoveredBy": "სისტემა", "rarity": "common" },
+    { "word": "ქარი", "meaning": "wind", "discoveredBy": "სისტემა", "rarity": "common" },
+    { "word": "ორთქლი", "meaning": "steam", "discoveredBy": "ნინო97", "rarity": "rare" },
+    { "word": "ლავა", "meaning": "lava", "discoveredBy": "გიორგი_დ", "rarity": "rare" },
+    { "word": "ნისლი", "meaning": "fog", "discoveredBy": "სალომე", "rarity": "rare" },
+    { "word": "ყინული", "meaning": "ice", "discoveredBy": "ლუკა_თ", "rarity": "common" },
+    { "word": "ვულკანი", "meaning": "volcano", "discoveredBy": "მარიამ_კ", "rarity": "epic" },
+    { "word": "ცისარტყელა", "meaning": "rainbow", "discoveredBy": "ანა_ბ", "rarity": "epic" },
+    { "word": "ღრუბელი", "meaning": "cloud", "discoveredBy": "დავით_ს", "rarity": "common" },
+    { "word": "გრიგალი", "meaning": "storm", "discoveredBy": "ნინო97", "rarity": "rare" }
+  ]
+}

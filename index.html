@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ka" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>სიტყვები — ქართული სიტყვების აღმოჩენა</title>
+<meta name="description" content="აღმოაჩინე ქართული სიტყვები, შეაგროვე კოლექცია და დაიკავე ადგილი ლიდერბორდზე.">
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=nunito:400,600,700,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div id="route-progress"></div>
+
+<!-- navbar -->
+<header class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark ka">ს</span>
+      <span>
+        სიტყვები
+        <span class="brand-sub">word discovery</span>
+      </span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html">მთავარი</a>
+      <a href="leaderboard.html">ლიდერბორდი</a>
+      <a href="profile.html">პროფილი</a>
+      <a href="about.html">შესახებ</a>
+    </nav>
+
+    <button class="burger" aria-label="მენიუს გახსნა">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="overlay"></div>
+<nav class="side-panel">
+  <a href="index.html">მთავარი</a>
+  <a href="leaderboard.html">ლიდერბორდი</a>
+  <a href="profile.html">პროფილი</a>
+  <a href="about.html">შესახებ</a>
+</nav>
+
+<!-- hero -->
+<main>
+  <section class="hero container">
+    <span class="hero-eyebrow">★ სიტყვების სამყარო</span>
+    <h1>აღმოაჩინე <span class="accent-text ka">ქართული</span> სიტყვები</h1>
+
+
+    <div class="search-shell">
+      <form id="search-form">
+        <div class="search-box" id="search-box">
+          <input
+            type="text"
+            id="word-input"
+            class="ka"
+            placeholder="დაწერეთ ქართული სიტყვა..."
+            autocomplete="off"
+            maxlength="40"
+            aria-label="ქართული სიტყვის ძებნა">
+          <button type="submit" class="btn btn-primary">მოძებნე</button>
+        </div>
+      </form>
+
+      <div class="search-hint" id="search-hint">მხოლოდ ქართული ასოები</div>
+
+      <div style="margin-top: 14px;">
+        <button id="random-word-btn" class="btn btn-ghost" type="button">🎲 შემთხვევითი სიტყვა</button>
+      </div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat">
+        <div class="num" id="stat-total" data-val="0">0</div>
+        <div class="lbl">სულ აღმოჩენილი</div>
+      </div>
+      <div class="stat">
+        <div class="num" id="stat-user" data-val="0">0</div>
+        <div class="lbl">თქვენი აღმოჩენები</div>
+      </div>
+      <div class="stat">
+        <div class="num" id="stat-searches" data-val="0">0</div>
+        <div class="lbl">ძებნების რაოდენობა</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- recent discoveries -->
+  <section class="container" style="margin-top: 50px; margin-bottom: 70px;">
+    <div class="section-head">
+      <span class="tag">კოლექცია</span>
+      <h2>ბოლოდროინდელი აღმოჩენები</h2>
+    </div>
+
+    <div id="recent-loading" class="spinner" style="display: none;"></div>
+    <div class="crystal-field" id="recent-list"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p style="margin: 0;">სიტყვები</p>
+  </div>
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

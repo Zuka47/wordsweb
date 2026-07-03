@@ -1,0 +1,14 @@
+{
+  "players": [
+    { "rank": 1, "username": "ნინო97", "discoveries": 142, "totalSearches": 210 },
+    { "rank": 2, "username": "გიორგი_დ", "discoveries": 128, "totalSearches": 201 },
+    { "rank": 3, "username": "მარიამ_კ", "discoveries": 110, "totalSearches": 188 },
+    { "rank": 4, "username": "სალომე", "discoveries": 96, "totalSearches": 160 },
+    { "rank": 5, "username": "ლუკა_თ", "discoveries": 81, "totalSearches": 140 },
+    { "rank": 6, "username": "ანა_ბ", "discoveries": 74, "totalSearches": 133 },
+    { "rank": 7, "username": "დავით_ს", "discoveries": 62, "totalSearches": 119 },
+    { "rank": 8, "username": "ელენე_მ", "discoveries": 55, "totalSearches": 102 },
+    { "rank": 9, "username": "ბექა_ჟ", "discoveries": 41, "totalSearches": 90 },
+    { "rank": 10, "username": "თამარ_ვ", "discoveries": 33, "totalSearches": 77 }
+  ]
+}

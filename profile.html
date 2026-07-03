@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ka" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>პროფილი — სიტყვები</title>
+<meta name="description" content="თქვენი სტატისტიკა, მიღწევები და ძებნის ისტორია.">
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=nunito:400,600,700,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div id="route-progress"></div>
+
+<header class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark ka">ს</span>
+      <span>
+        სიტყვები
+        <span class="brand-sub">word discovery</span>
+      </span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html">მთავარი</a>
+      <a href="leaderboard.html">ლიდერბორდი</a>
+      <a href="profile.html">პროფილი</a>
+      <a href="about.html">შესახებ</a>
+    </nav>
+
+    <button class="burger" aria-label="მენიუს გახსნა">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="overlay"></div>
+<nav class="side-panel">
+  <a href="index.html">მთავარი</a>
+  <a href="leaderboard.html">ლიდერბორდი</a>
+  <a href="profile.html">პროფილი</a>
+  <a href="about.html">შესახებ</a>
+</nav>
+
+<main>
+  <section class="hero container" style="padding-bottom: 10px;">
+    <span class="hero-eyebrow">👤 პროფილი</span>
+    <h1>თქვენი <span class="accent-text">სტატისტიკა</span></h1>
+    <p class="lead" id="profile-username">მოგესალმებით!</p>
+  </section>
+
+  
+  <section class="container">
+    <div class="stat-grid">
+      <div class="card stat-card">
+        <div class="icon">🔍</div>
+        <div class="value" id="p-searched" data-val="0">0</div>
+        <div class="label">მოძიებული სიტყვები</div>
+      </div>
+      <div class="card stat-card">
+        <div class="icon">✨</div>
+        <div class="value" id="p-discoveries" data-val="0">0</div>
+        <div class="label">ახალი აღმოჩენები</div>
+      </div>
+      <div class="card stat-card">
+        <div class="icon">🔁</div>
+        <div class="value" id="p-duplicates" data-val="0">0</div>
+        <div class="label">გამეორებები</div>
+      </div>
+      <div class="card stat-card">
+        <div class="icon">📈</div>
+        <div class="value" id="p-success">0%</div>
+        <div class="label">წარმატების მაჩვენებელი</div>
+        <div class="progress-bar">
+          <span id="p-success-bar" style="width: 0%;"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="container" style="margin-top: 50px;">
+    <div class="section-head">
+      <span class="tag">მიღწევები</span>
+      <h2>თქვენი ჯილდოები</h2>
+    </div>
+    <div class="achv-grid" id="achv-grid"></div>
+  </section>
+
+  
+  <section class="container" style="margin-top: 50px;">
+    <div class="card" style="max-width: 540px;">
+      <h3 style="margin-bottom: 20px;">პარამეტრები</h3>
+
+      <div class="row-flex wrap-mobile" style="justify-content: space-between; margin-bottom: 20px;">
+        <div>
+          <strong>მუქი/ღია რეჟიმი</strong>
+          <p style="margin: 2px 0 0; font-size: 0.84rem;">გადართეთ თემა</p>
+        </div>
+        <button class="toggle" id="theme-toggle" aria-label="თემის გადართვა">
+          <span class="knob"></span>
+        </button>
+      </div>
+
+      <div class="row-flex wrap-mobile" style="justify-content: space-between;">
+        <div>
+          <strong>ისტორიის გასუფთავება</strong>
+          <p style="margin: 2px 0 0; font-size: 0.84rem;">წაშალეთ ყველა სტატისტიკა</p>
+        </div>
+        <button class="btn btn-danger" id="clear-history-btn">გასუფთავება</button>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="container" style="margin: 50px 0 70px;">
+    <div class="section-head">
+      <span class="tag">ისტორია</span>
+      <h2>ბოლო ძებნები</h2>
+    </div>
+    <div class="card" style="padding: 8px 20px;">
+      <div class="history-list" id="history-list"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p style="margin: 0;">სიტყვები &mdash; BTU Frontend Web Development საბოლოო პროექტი &mdash; HTML, CSS &amp; JavaScript</p>
+  </div>
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>
