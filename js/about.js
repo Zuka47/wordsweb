@@ -1,7 +1,3 @@
-/* =========================================================
-   about.js — About / Help page logic
-   ========================================================= */
-
 document.addEventListener('DOMContentLoaded', ()=>{
   initFAQ();
 });
