@@ -1,9 +1,3 @@
-/* =========================================================
-   common.js — shared across all pages
-   Handles: burger menu, theme, toasts, sound fx, storage helpers
-   ========================================================= */
-
-/* ---------- Route progress bar (cosmetic loading feel) ---------- */
 (function routeProgress(){
   const bar = document.getElementById('route-progress');
   if(!bar) return;
@@ -19,7 +13,6 @@
   });
 })();
 
-/* ---------- Storage helpers ---------- */
 const Store = {
   get(key, fallback){
     try{
@@ -36,9 +29,9 @@ const DEFAULT_STATS = {
   searched: 0,
   discoveries: 0,
   duplicates: 0,
-  history: [],          // {word, status, ts}
-  discoveredWords: [],  // array of word strings (this user's session discoveries)
-  achievements: []      // array of achievement ids unlocked
+  history: [],          
+  discoveredWords: [],  
+  achievements: []      
 };
 
 function getStats(){ return Store.get('skg_stats', DEFAULT_STATS); }
@@ -63,7 +56,6 @@ function checkAchievements(stats){
   return newlyUnlocked;
 }
 
-/* ---------- Sound effects (synthesized — no audio files needed) ---------- */
 const SFX = {
   ctx: null,
   init(){ if(!this.ctx){ this.ctx = new (window.AudioContext || window.webkitAudioContext)(); } },
@@ -106,11 +98,11 @@ const SFX = {
           oo.start(now + i*0.1); oo.stop(now + i*0.1 + 0.36);
         });
       }
-    }catch(e){ /* audio not available — fail silently */ }
+    }catch(e){}
   }
 };
 
-/* ---------- Toast notifications ---------- */
+
 function showToast(message, opts = {}){
   const { title = '', type = 'info', duration = 3600 } = opts;
   let stack = document.getElementById('toast-stack');
@@ -136,7 +128,7 @@ function showToast(message, opts = {}){
   }, duration);
 }
 
-/* ---------- Shard burst (signature confetti) ---------- */
+
 function shardBurst(originEl){
   const burst = document.createElement('div');
   burst.className = 'shard-burst';
@@ -172,7 +164,7 @@ function shardBurst(originEl){
   setTimeout(()=> burst.remove(), 1500);
 }
 
-/* ---------- Theme ---------- */
+
 function applyTheme(theme){
   document.documentElement.setAttribute('data-theme', theme);
   Store.set('skg_theme', theme);
@@ -183,7 +175,7 @@ function initTheme(){
 }
 initTheme();
 
-/* ---------- Navbar: burger / side panel ---------- */
+
 function initNav(){
   const burger = document.querySelector('.burger');
   const panel = document.querySelector('.side-panel');
@@ -208,7 +200,7 @@ function initNav(){
   overlay.addEventListener('click', closeMenu);
   panel.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
-  // mark active link by current page
+  
   const current = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a, .side-panel a').forEach(a=>{
     const href = a.getAttribute('href');
