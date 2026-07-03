@@ -1,10 +1,6 @@
-/* =========================================================
-   main.js — Home page logic
-   ========================================================= */
-
 const GEORGIAN_ONLY = /^[\u10A0-\u10FF\s]+$/;
 
-let knownWords = [];   // loaded from JSON + localStorage merged (lowercase form for matching)
+let knownWords = [];   
 let recentList = [];
 
 const els = {};
@@ -38,7 +34,7 @@ async function loadWordBank(){
     const data = await res.json();
     const seed = data.words.map(w => ({ word: w.word, meaning: w.meaning, by: w.discoveredBy, rarity: w.rarity, ts: 0 }));
 
-    const stored = Store.get('skg_discovered', []); // [{word, meaning, by, rarity, ts}]
+    const stored = Store.get('skg_discovered', []); 
     knownWords = mergeUnique(seed, stored);
     recentList = [...knownWords].sort((a,b)=> b.ts - a.ts).slice(0, 8);
   }catch(err){
@@ -137,7 +133,7 @@ function handleDiscovery(word){
   els.input.value = '';
 }
 
-// keep storage lean: only persist user-made discoveries (ts>0); seed words come back from JSON each load
+
 function seedMarkers(){ return []; }
 
 function pickRarity(){
