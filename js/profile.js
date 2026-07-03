@@ -1,7 +1,3 @@
-/* =========================================================
-   profile.js — Profile / statistics page logic
-   ========================================================= */
-
 document.addEventListener('DOMContentLoaded', ()=>{
   renderUsername();
   renderStats();
