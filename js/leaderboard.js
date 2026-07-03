@@ -1,7 +1,3 @@
-/* =========================================================
-   leaderboard.js — Leaderboard page logic
-   ========================================================= */
-
 document.addEventListener('DOMContentLoaded', async ()=>{
   await loadLeaderboard();
 });
